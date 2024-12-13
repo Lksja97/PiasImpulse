@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pia's Impulse</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Estonia&family=Kavivanar&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Estonia", cursive;
+            color: white;
+            background-image: url(b8b76eb0-94df-4566-a800-2b10fda32768.webp);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            position: relative;
+            font-family: "Estonia", cursive;
+            font-size: 3.5rem;
+            margin-left: 2%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 80px;
+            font-size: larger;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 3rem;
+            transition: color 0.3s;
+            font-family: "Estonia", cursive;
+        }
+
+        nav ul li a:hover {
+            color: #32cd32;
+        }
+
+        
+        .burger {
+            display: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                padding: 10px 0;
+                gap: 10px;
+                text-align: center;
+                z-index: 1000;
+            }
+
+            nav ul.active {
+                display: flex; 
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            overflow: auto; 
+            max-height: calc(100vh - 120px);
+}
+        }
+
+        .content {
+            max-width: 900px;
+            font-size: 1.2rem;
+        }
+
+        .content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-family: "Kavivanar", cursive;
+        }
+
+        .content img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #32cd32;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">Pia's Impulse</div>
+    <div class="burger">&#9776;</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="Uebermich.html">Über mich</a></li>
+            <li><a href="teams.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="content">
+        <h2>Spirituelle Lebensberatung</h2>
+        <p>Weil sich alle Antworten bereits in uns befinden.</p>
+        <p>Schön, dass Du hergefunden hast und (d)eine Situation aus einer alternativen Sichtweise betrachten oder präventiv angehen möchtest.</p>
+        <p>Vielleicht möchtest Du auch einfach an einem Videochat teilnehmen, dich spirituell austauschen oder inspirieren lassen.</p>
+        <p>Schau Dich gern um und/oder schreib mir eine Direktnachricht - Ich freue mich auf deinen Impuls von Dir!</p>
+        <img src="logo.jpg" alt="Bild" />
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Pia's Impulse - Folge uns: <a href="https://www.instagram.com/pias_impulse/">Instagram</a></p>
+</footer>
+
+<script>
+    
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav ul');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

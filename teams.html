@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pia's Impulse</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Estonia&family=Kavivanar&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <style type="text/css">
+
+
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Estonia", cursive;
+            color: white;
+            background-image: url(b8b76eb0-94df-4566-a800-2b10fda32768.webp);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            position: relative;
+            font-family: "Estonia", cursive;
+            font-size: 3.5rem;
+            margin-left: 2%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 80px;
+            font-size: larger;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 3rem;
+            transition: color 0.3s;
+            font-family: "Estonia", cursive;
+        }
+
+        nav ul li a:hover {
+            color: #32cd32;
+        }
+
+        
+        .burger {
+            display: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            form {
+        
+        padding: 30px; 
+        font-size: 1rem; 
+        margin-top: 1cm;
+        margin-bottom: 1cm;
+    }
+
+    form h2 {
+        font-size: 2rem; 
+    }
+
+    form label {
+        font-size: 1.5rem; 
+    }
+
+    form input, form textarea {
+        font-size: 1rem; 
+        width: 100%; 
+    }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                padding: 10px 0;
+                gap: 10px;
+                text-align: center;
+                z-index: 1000;
+            }
+
+            nav ul.active {
+                display: flex; 
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    font-family: "Estonia", cursive;
+    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+form {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 30px; 
+    border-radius: 16px; 
+    color: black; 
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    
+}
+
+form:hover {
+    transform: translate(-50%, -50%) scale(1.02); 
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3); 
+}
+
+form h2 {
+    margin-bottom: 15px; 
+    font-family: "Estonia", cursive;
+    font-size: 3rem;
+    color: #0a0a0a;
+    text-align: center;
+}
+
+form label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    transition: border-color 0.3s ease;
+    width: 7cm;
+    resize: none;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #000000; 
+    outline: none;
+}
+
+footer {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            width: 100%;
+            position:relative;
+            font-size: larger;
+        }
+
+        footer a {
+            color: #32cd32;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+  <div class="logo">Pia's Impulse</div>
+  <div class="burger">&#9776;</div>
+  <nav>
+      <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="uebermich.html">Über mich</a></li>
+          <li><a href="teams.html">Kontakt</a></li>
+      </ul>
+  </nav>
+</header>
+
+<main>
+    
+    <form action="sendemail.php" method="POST">
+        <h2>Kontaktformular</h2>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Nachricht:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+        <button type="submit">Absenden</button>
+      </form>
+     
+</main>
+
+<footer>
+  <p>&copy; 2024 Pia's Impulse  -  
+  Folge uns: <a href="https://www.instagram.com/pias_impulse/">Instagram</a></p>
+</footer>
+
+<script>
+    
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav ul');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
